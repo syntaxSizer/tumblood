@@ -1,6 +1,7 @@
+#defining Schema/models
 import datetime
 from flask import url_for
-from tumblelog import db
+from tumblood import db
 
 class Comment(db.EmbeddedDocument):
     created_at = db.DateTimeField(default=datetime.datetime.now, required=True)
