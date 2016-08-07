@@ -9,3 +9,12 @@ db = MongoEngine(app)
 
 if __name__ == '__main__':
     app.run()
+
+#register the blueprint to avoid circular dependancy
+def register_blueprints(app):
+    #pervent circuar import
+    from tumblood.views import posts 
+    app.register_bluprints(posts)
+
+register_blueprints(app)
+    
