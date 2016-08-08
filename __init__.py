@@ -13,7 +13,7 @@ if __name__ == '__main__':
 def register_blueprints(app):
     # Prevents circular imports
     from tumblood.views import posts
-    from tumblood.views import admin
+    from tumblood.admin import admin
     app.register_blueprint(posts)
     app.register_blueprint(admin)
 
