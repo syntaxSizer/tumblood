@@ -4,9 +4,10 @@ from flask.views import MethodView
 from flask.ext.mongoengine.wtf import model_form
 
 from tumblood.auth import requires_auth
-from tumblood.models import Post, Comment
+from tumblood.models import Post, BlogPost, Video, Image, Quote, Comment
 
 admin = Blueprint('admin', __name__, template_folder='templates')
+
 
 class List(MethodView):
     decorators = [requires_auth]
@@ -15,6 +16,7 @@ class List(MethodView):
     def get(self):
         posts = self.cls.objects.all()
         return render_template('admin/list.html', posts=posts)
+
 
 class Detail(MethodView):
 
@@ -50,10 +52,6 @@ class Detail(MethodView):
             "create": slug is None
         }
         return context
-
- 
-
-
 
     def get(self, slug):
         context = self.get_context(slug)

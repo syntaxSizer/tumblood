@@ -21,7 +21,7 @@ class Post(db.DynamicDocument):
     def __unicode__(self):
         return self.title
 
-     @property
+    @property
     def post_type(self):
         return self.__class__.__name__
 
@@ -30,6 +30,7 @@ class Post(db.DynamicDocument):
         'indexes': ['-created_at', 'slug'],
         'ordering': ['-created_at']
     }
+
 
 class BlogPost(Post):
     body = db.StringField(required=True)
