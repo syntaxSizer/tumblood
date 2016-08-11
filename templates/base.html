@@ -17,12 +17,13 @@
 
 {%- block topbar -%}
     <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
+     
         <div class="navbar-header">
           <h2>
               <a href="/" class="brand">My Tumblood</a> <small>Starring Flask, MongoDB and MongoEngine</small>
           </h2>
         </div>
+<div class="container">
         <div class="navbar-collapse">
         </div><!--/.nav-collapse -->
       </div>
@@ -35,7 +36,11 @@
         {% block content %}{% endblock %}
       </div>
     </div>
-    {% block js_footer %}{% endblock %}
+    {% block js_footer %}
+<div class="container">
+<small class="footer" >&copy;2016 by Qusai Alfaki</small>
+</div>
+{% endblock %}
   </body>
 </html>
 

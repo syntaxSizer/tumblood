@@ -22,8 +22,11 @@ margin:0;}
 NAV
 ********************************************/
 .navbar-header{
-padding:44px;
+
+padding-left:95px;
+position:fixed;
 background-color:#222;
+width:100%;
 }
 
 a{
