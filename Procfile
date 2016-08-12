@@ -1,1 +1,1 @@
-web: python manage.py ${PORT}
+web: python manage.py
